@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisata Provinsi Jawa Tengah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-
-
-        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,528 +13,234 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #93c7db;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f9;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header section */
         header {
-            background-image: url('./img/dieng.jpg'); /* Replace with an image of Jawa Tengah tourism */
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5), 
+                rgba(0, 0, 0, 0.5)
+            ), url('./img/dieng.jpg');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            height: 400px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: #fdfafa;
+            justify-content: center;
             text-align: center;
+            color: #fff;
         }
 
         header h1 {
-            font-size: 4em;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
 
-        /* Navigation menu */
         nav {
-            background-color: #333;
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             padding: 15px 0;
-            text-align: center;
         }
 
         nav a {
-            color: white;
-            padding: 10px 20px;
+            color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 10px;
-            transition: background 0.5s;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
         nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
+            background-color: #0059b3;
         }
 
-        /* Main section for tourist destinations */
         section.destinations {
             padding: 50px 20px;
-            text-align: center;
+            max-width: 1200px;
+            margin: auto;
         }
 
-
-        section h2 {
+        section.destinations h2 {
+            text-align: center;
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            color: #004080;
         }
 
         .destination-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-
         .destination-box {
-            background: #f8f6f6;
+            background: #fff;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(240, 238, 238, 0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .destination-box img {
             width: 100%;
-            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
         }
-
-        
-
-        .destination-box:hover {
-            transform: scale(1.05);
-        }
-
-       
 
         .destination-box h3 {
-            margin: 15px 0;
-            font-size: 1.8em;
+            font-size: 1.4em;
+            margin: 15px;
+            color: #004080;
         }
 
-        
         .destination-box p {
-            font-size: 1em;
+            font-size: 0.95em;
             color: #666;
+            padding: 0 15px 15px 15px;
         }
 
-        id h2 {
-            font-size: 4em;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        .destination-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
-        
 
-        /* Footer section */
+        .back-to-top {
+            display: block;
+            margin: 40px auto 0;
+            text-align: center;
+            text-decoration: none;
+            color: #004080;
+            font-weight: 600;
+            border: 1px solid #004080;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #004080;
+            color: #fff;
+        }
+
         footer {
-            background-color: #333;
-            color: rgb(247, 245, 245);
+            background-color: #004080;
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
 
-        footer p {
-            margin-top: 10px;
-        }
-
-        /* Responsive styling */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 2em;
             }
 
             .destination-box h3 {
-                font-size: 1.4em;
+                font-size: 1.2em;
             }
         }
-
-        
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+
+    <!-- Header -->
     <header>
-        <h1 id="satu">Wisata Provinsi Jawa Tengah</h1>
+        <h1>Wisata Provinsi Jawa Tengah</h1>
     </header>
 
-     <!-- Navigation Menu -->
-     <nav>
-        <a href="#satu">Home</a>
-        <a href="#dua">Destinasi</a>
-        <a href="#empat">Kontak</a>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinasi">Destinasi</a>
+        <a href="#kontak">Kontak</a>
     </nav>
-    <!-- Destinations Section -->
 
-    <section class="destinations">
-        <h2 id ="dua">Destinasi Wisata Unggulan</h2>
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinasi">
+        <h2>Destinasi Wisata Unggulan</h2>
         <div class="destination-container">
             <div class="destination-box">
-                <img src="img/candiborobudur.jpg" alt="candiborobudur">
+                <img src="img/candiborobudur.jpg" alt="Candi Borobudur">
                 <h3>Candi Borobudur</h3>
-                <p>Salah satu candi Buddha terbesar di dunia yang terletak di Magelang. Candi Borobudur memiliki arsitektur yang megah.</p>
+                <p>Salah satu candi Buddha terbesar di dunia yang terletak di Magelang, dengan arsitektur yang megah.</p>
             </div>
             <div class="destination-box">
-                <img src="img/datarantinggi.jpg" alt="datarantinggi">
+                <img src="img/datarantinggi.jpg" alt="Dataran Tinggi Dieng">
                 <h3>Dataran Tinggi Dieng</h3>
-                <p>Dataran tinggi yang menakjubkan dengan panorama alam yang indah, Dieng juga dikenal sebagai dataran tinggi vulkanik yang memiliki beberapa candi-candi kuno.</p>
+                <p>Panorama alam yang indah dengan candi-candi kuno dan suasana sejuk di dataran tinggi vulkanik Dieng.</p>
             </div>
             <div class="destination-box">
-                <img src="img/karimun.jpg" alt="karimun">
+                <img src="img/karimun.jpg" alt="Karimunjawa">
                 <h3>Karimunjawa</h3>
                 <p>Kepulauan tropis yang menawan dengan pantai putih dan terumbu karang yang indah.</p>
             </div>
             <div class="destination-box">
-                <img src="img/prambanan.jpg" alt="prambanan">
+                <img src="img/prambanan.jpg" alt="Candi Prambanan">
                 <h3>Candi Prambanan</h3>
-                <p>Candi Hindu terbesar di indonesia yang juga merupakan Situs Warisan Dunia UNESCO> Prambanan terkenal dengan cerita Ramayana dan arsitekrut candi yang tinggi dan megah.</p>
+                <p>Candi Hindu terbesar di Indonesia yang terkenal dengan kisah Ramayana dan arsitektur yang tinggi dan megah.</p>
             </div>
             <div class="destination-box">
-                <img src="img/kotalama.jpg" alt="kotalama">
+                <img src="img/kotalama.jpg" alt="Kota Lama">
                 <h3>Kota Lama Semarang</h3>
-                <p>Daerah bersejarah di Semarang yang menawarkan pemandangan bangunan kolonial Belanda.Kota lama sering di sebut sebagai "Little Netherlands".</p>
+                <p>Area bersejarah dengan bangunan kolonial Belanda yang kental. 
+                  Sering dijuluki "Little Netherlands" karena nuansa tempo dulunya.</p>
             </div>
             <div class="destination-box">
-                <img src="img/lawangsewu.jpg" alt="lawangsewu">
-                <h3>Lawang Sewu</h3>
-                <p>Gedung bersejarah peninggalan Belanda yang dikenal dengan banyak pintunya dan arsitektur bergaya kolonial.Lawang sewu juga memiliki cerita mistis ang menarik minat wisatawan.</p>
+                <img src="img/lawangsewu.jpg" alt="Lawang Sewu">
+                <h3>Lawang sewu</h3>
+                <p>Gedung bersejarah di Semarang yang dulunya merupakan kantor kereta api. 
+                  Terkenal dengan banyak pintu dan kisah mistisnya.</p>
             </div>
             <div class="destination-box">
-                <img src="img/menganti.png" alt="menganti">
-                <h3>Pantai Menganti</h3>
-                <p>Pantai Menganti terkenal dengan pasir putih dengan tebing-tebing tinggi di sekitarnya. </p>
-            </div>
-            <div class="destination-box">
-                <img src="img/kaligua.jpg" alt="kaligua">
-                <h3>Agrowisata Kaligua</h3>
-                <p>Kebun teh yang luas di daerah Brebes, Agrowisata Kaligua menawarkan udara sejuk dan hamparan hijau yang menenangkan.</p>
-            </div>
-            <div class="destination-box">
-                <img src="img/umbul.jpg" alt="umbul">
+                <img src="img/umbulpongok.jpeg" alt="Umbul Pongok">
                 <h3>Umbul Ponggok</h3>
-                <p>Wisata air berupa kolam alami yang dikelola snorkeling dan fotografi bawah air, sangat populer di kalangan wisatawan muda.</p>
+                <p>Destinasi wisata air di Klaten dengan kolam 
+                  alami jernih yang cocok untuk snorkeling dan fotografi bawah air.</p>
             </div>
-            <div class="destination-box">
-                <img src="img/ambarawa.jpeg" alt="ambarawa">
+             <div class="destination-box">
+                <img src="img/musiumkereta.jpeg" alt="Museum Kereta Api Ambarawa">
                 <h3>Museum Kereta Api Ambarawa</h3>
-                <p>Museum kereta api ambarawa juga merupakan salah satu museum kereta api tertua di Indonesia. Di sini, kita bisa melihat berbagai jenis kereta api yang pernah digunakan di Indonesia pada masa lalu. Selain itu, ada juga stasiun kereta api tua yang masih berdiri kokoh di sini.</p>
-            </div> 
-            <div class="destination-box">
-                <img src="img/batu.jpg" alt="batu">
-                <h3>Kawasan  Batu Raden</h3>
-                <p>Kawasan wisata batu raden terletak dikawasan Banyumas, dan menjadi salah satu tujuan wisata favorit di Jawa Tengah. Kawasan ini terkenal dengan udaranya yang sejuk dan segar, dengan ketinggian mencapai 650 mdpl.</p>
+                <p>Museum kereta api di Ambarawa yang menampilkan berbagai lokomotif antik. 
+                  Wisatawan bisa menaiki kereta wisata dengan pemandangan alam hijau.</p>
             </div>
             <div class="destination-box">
-                <img src="img/tawangmangu.jpg" alt="tawangmangu">
-                <h3>Air Terjun Tawangmangu</h3>
-                <p>Air Terjun Tawangmangu merupakan salah satu wisata alam yang terkenal di Jawa Tengah. Air terjun ini memiliki ketinggian sekitar 80 meter dengan latar belakang hutan tropis yang memukau Lokasinya berada di kawasan Tawangmangu, sekitar 30 km dari kota Karanganyar atau 60 km dari kota Solo. </p>
-            </div>   
-
+                <img src="img/pantaimenganti.jpeg" alt="Pantai Menganti">
+                <h3>Pantai Menganti</h3>
+                <p>Pantai indah di Kebumen dengan pasir putih dan tebing-tebing tinggi. 
+                  Cocok untuk menikmati panorama pantai eksotis.</p>
+            </div>
+            <div class="destination-box">
+                <img src="img/agrowisatakaligua.jpeg" alt="Agrowisata Kali Gua">
+                <h3>Agrowisata Kali Gua</h3>
+                <p>Kebun teh di Brebes yang menawarkan suasana sejuk, udara segar, dan pemandangan kebun teh hijau yang luas.</p>
+            </div>
+             <div class="destination-box">
+                <img src="img/gunungmerbabu.jpg" alt="Gunung Merbabu">
+                <h3>Gunung Merbabu </h3>
+                <p>Gunung berapi yang populer di kalangan pendaki. 
+                  Memiliki jalur pendakian dengan pemandangan sabana hijau dan lautan awan yang memukau.</p>
+            </div>
+            <div class="destination-box">
+                <img src="img/cutuglawe.jpeg" alt="Curug Lawe & Curug Benowo">
+                <h3>Curug Lawe & Curug Benowo</h3>
+                <p> Air terjun kembar di lereng Gunung Ungaran, Semarang. 
+                  Dikenal dengan suasana sejuk, hutan asri, dan trek alam yang menantang.</p>
+            </div>
+            <!-- Tambahkan destinasi lainnya sesuai kebutuhan -->
+        </div>
+        <a href="#destinasi" class="back-to-top">Kembali ke Awal</a>
     </section>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Komentar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        .comment-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .comment-form h2 {
-            text-align: center;
-        }
-        .comment-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .comment-form input, .comment-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .comment-form button {
-            padding: 10px 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .comment-form button:hover {
-            background-color: #218838;
-        }
 
-        .card {
-  width: 450px;
-  position: center;
-  height: fit-content;
-  background-color: white;
-  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 17px 17px 27px 27px;
-}
-
-.title {
-  width: 100%;
-  height: 50px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  border-bottom: 1px solid #f1f1f1;
-  font-weight: 700;
-  font-size: 13px;
-  color: #47484b;
-}
-
-.title::after {
-  content: '';
-  width: 8ch;
-  height: 1px;
-  position: absolute;
-  bottom: -1px;
-  background-color: #47484b;
-}
-
-.comments {
-  display: grid;
-  grid-template-columns: 35px 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-
-.comment-react {
-  width: 35px;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: auto;
-  margin: 0;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-}
-
-.comment-react button {
-  width: 35px;
-  height: 35px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 0;
-  outline: none;
-}
-
-.comment-react button:after {
-  content: '';
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: -2.5px;
-  top: -2.5px;
-  background-color: #f5356e;
-  border-radius: 50%;
-  z-index: 0;
-  transform: scale(0);
-}
-
-.comment-react button svg {
-  position: relative;
-  z-index: 9;
-}
-
-.comment-react button:hover:after {
-  animation: ripple 0.6s ease-in-out forwards;
-}
-
-.comment-react button:hover svg {
-  fill: #f5356e;
-}
-
-.comment-react button:hover svg path {
-  stroke: #f5356e;
-  fill: #f5356e;
-}
-
-.comment-react hr {
-  width: 80%;
-  height: 1px;
-  background-color: #dfe1e6;
-  margin: auto;
-  border: 0;
-}
-
-.comment-react span {
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  font-size: 13px;
-  font-weight: 600;
-  color: #707277;
-}
-
-.comment-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-.comment-container .user {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 10px;
-}
-
-.comment-container .user .user-pic {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f1f1f1;
-  border-radius: 50%;
-}
-
-.comment-container .user .user-pic:after {
-  content: '';
-  width: 9px;
-  height: 9px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  border-radius: 50%;
-  background-color: #0fc45a;
-  border: 2px solid #ffffff;
-}
-
-.comment-container .user .user-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3px;
-}
-
-.comment-container .user .user-info span {
-  font-weight: 700;
-  font-size: 12px;
-  color: #47484b;
-}
-
-.comment-container .user .user-info p {
-  font-weight: 600;
-  font-size: 10px;
-  color: #acaeb4;
-}
-
-.comment-container .comment-content {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  color: #5f6064;
-}
-
-.text-box {
-  width: 100%;
-  height: fit-content;
-  background-color: #f1f1f1;
-  padding: 8px;
-}
-
-.text-box .box-container {
-  background-color: #ffffff;
-  border-radius: 8px 8px 21px 21px;
-  padding: 8px;
-}
-
-.text-box textarea {
-  width: 100%;
-  height: 40px;
-  resize: none;
-  border: 0;
-  border-radius: 6px;
-  padding: 12px 12px 10px 12px;
-  font-size: 13px;
-  outline: none;
-  caret-color: #0a84ff;
-}
-
-.text-box .formatting {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto 1fr;
-}
-
-.text-box .formatting button {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 0;
-  outline: none;
-}
-
-.text-box .formatting button:hover {
-  background-color: #f1f1f1;
-}
-
-.text-box .formatting .send {
-  width: 30px;
-  height: 30px;
-  background-color: #0a84ff;
-  margin: 0 0 0 auto;
-}
-
-.text-box .formatting .send:hover {
-  background-color: #026eda;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0.6;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-    </style>
-</head>
-<body>
-
-    <div class="comment-form">
-        <h2 id="empat">Hubungi kami</h2>
-        <form action="/submit-comment" method="post">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
-
-            <label for="comment">Komentar:</label>
-            <textarea id="comment" name="comment" rows="5" placeholder="Tulis komentar Anda" required></textarea>
-
-            <button type="submit">Kirim Sekarang</button>
-        </form>
-    </div>
-    
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Wisata Provinsi Jawa Tengah</p>
+    <!-- Footer -->
+    <footer id="kontak">
+        <p>&copy; 2025 Wisata Jawa Tengah. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
